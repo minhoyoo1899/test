@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ps5</title>
+  <style>
+    body{
+      margin: 0;      
+    }
+
+    body section header {      
+      height: 3vw;
+      display: flex;    
+    }
+
+    section, footer{
+      width: 100%;
+    }
+    .sonybar{
+      width: 100%;
+      height: 3.6vh;
+      background-color: black;
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      align-content: space-around;
+      justify-content: flex-start;
+    }
+    .left_list{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: space-between;
+      justify-content: flex-start;
+      align-items: center;
+      color: #808080;
+      width: 133vh;
+    }
+    .right_list{
+      display: flex;
+      width: 30vh;
+      height: 2.5vw;
+
+    }
+    .right_list div:nth-of-type(1){
+      width: 41%;
+      height: 77%;
+      text-align: center;
+      font-size: 160%;
+      background-color: rgba(43, 43, 43, 1);
+      border-radius: 45px;
+      color: white;
+      margin: 2% 0% 0% 0%;
+    }
+    .right_list div:nth-of-type(1):hover {
+      background-color: rgba(96, 96, 96, 1);
+    }
+
+    .right_list div:nth-of-type(2) {
+      width: 13vh;
+      margin: 0% 0% 0% 3%;
+      font-size: 135%;
+      border: 1px solid;
+      box-shadow: 1px 1px 0px 0px;
+      text-align: center;
+    }
+    
+    .canvas{
+      height: 60vw;
+      text-align: center;
+    }
+    footer {
+      background-color: rgba(0, 67, 156, 1);
+      height: 40vw;
+    }
+  </style>
+</head>
+<body>
+  <div class="sonybar">
+    <img src="img/sony_bar.jpg" alt=""/> <!-- 상단로고 -->
+  </div>
+  <section>
+    <header>
+      <div class="left_list">
+        <div>
+          <img src="img/ps_blue_logo.jpg" alt=""> <!-- ps로고 -->
+        </div>
+        <div>
+          게임
+          <img src="img/gray_down_arrow.jpg" alt=""> <!-- 드롭다운화살표 -->
+        </div>
+        <div>
+          하드웨어
+          <img src="img/gray_down_arrow.jpg" alt=""> <!-- 드롭다운화살표 -->
+        </div>
+        <div>
+          서비스
+          <img src="img/gray_down_arrow.jpg" alt=""> <!-- 드롭다운화살표 --></div>
+        <div>
+          뉴스
+          <img src="img/gray_down_arrow.jpg" alt=""> <!-- 드롭다운화살표 --></div>
+        <div>
+          구입
+          <img src="img/gray_down_arrow.jpg" alt=""> <!-- 드롭다운화살표 --></div>
+        <div>
+          고객지원
+          <img src="img/gray_down_arrow.jpg" alt=""> <!-- 드롭다운화살표 --></div>
+      </div>
+      <div class="right_list">
+        <div>로그인</div>
+        <div>
+          검색          
+          <img src="img/search_icon.jpg" alt="">                
+        </div>
+      </div>
+    </header>
+    <nav></nav>
+  </section>
+  <section></section>
+  <section class="canvas">캔버스 구간</section>
+  <footer>
+    <div>이미지1</div>
+    <div>이미지2 & 회사관련</div>
+    <div>etc</div>
+  </footer>
+</body>
+</html>
