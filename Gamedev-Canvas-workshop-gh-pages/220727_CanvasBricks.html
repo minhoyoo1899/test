@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas - bricks</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;      
+    }
+    canvas {
+      width: 50%;
+      height: 50%;
+      margin: 10% auto;
+      background-color: gray;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas"></canvas>
+  <script>
+    // 전역 변수 생성
+    var canvas = document.getElementById("myCanvas");
+    console.dir(canvas);
+    var ctx = canvas.getContext("2d"); //?
+    console.dir(ctx);
+    var ballRadius = 10;
+    var x = canvas.width/2;
+    var y = canvas.height-30;
+    var dx = 2;
+    var dy = -2;
+    var paddleHeight = 10;
+    var paddleWidth = 75;
+    var paddleX = (canvas.width - paddleWidth)/2;
+    var rightPressed = false;
+    var leftPressed = false;
+
+    //좌우 방향키 설정 이벤트 리스너를 통해 핸들링 할 수 있도록 설정을 위해 외부입력 불러 오기 
+    // true와 false의 차이?
+    document.addEventListener("keydown", keyDownHandler, false); 
+    document.addEventListener("keyup", keyUpHandler, false);
+
+    // 키보드의 좌, 우방향키의 모션을 감지하는 function
+    function keyDownHandler(e) { 
+      if(e.code == "ArrowRight") {
+        rightPressed = true;
+      } else if (e.code == 'ArrowLeft') {
+        leftPressed = true;
+      }
+    }
+    function keyUpHandler(e) {
+      if(e.code == "ArrowRight") {
+        rightPressed = false;
+      } else if(e.code == 'ArrowLeft') {
+        leftPressed = false;
+      }
+    }
+
+    function drawBall() {
+      ctx.beginPath();
+      ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+      ctx.fillStyle = "#0095DD";
+      ctx.fill();
+      ctx.closePath();
+    }
+
+    function drawPaddle() {
+      ctx.beginPath();
+      ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+      ctx.fillStyle = "#0095DD";
+      ctx.fill();
+      ctx.closePath();      
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawBall();
+      drawPaddle();
+      
+      if(x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+        dx = -dx;
+      }
+      if(y+ dy > canvas.height-ballRadius || y + dy < ballRadius) {
+        dy = -dy;
+      }
+
+      if(rightPressed && paddleX < canvas.width-paddleWidth) {
+        paddleX += 7;
+      } else if(leftPressed && paddleX > 0) {
+        paddleX -= 7;
+      }
+
+      x += dx;
+      y += dy;
+    }
+
+    setInterval(draw, 10);
+
+  </script>
+</body>
+</html>

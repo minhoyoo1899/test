@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gamedev Canvas Workshop - lesson 2: move the ball</title>
+    <style>
+        * { padding: 0; margin: 0; } 
+        canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="480" height="320"></canvas>
+
+<script>
+    //전역변수 설정
+    var canvas = document.getElementById("myCanvas"); // 문서내의 myCanvas의 값을 가져옴
+    var ctx = canvas.getContext("2d"); //문맥에서 2d를 포함하는 값을 가져온다.
+    var x = canvas.width/2; // 변수 x = 캔버스 가로길이의 1/2이다.
+    var y = canvas.height-30; // 변수 y = 캔버스 세로 길이에서 30을 뺀다. 
+    var dx = 2; 
+    var dy = -2;
+
+    function drawBall() {
+        ctx.beginPath();
+        ctx.arc(x, y, 10, 0, Math.PI*2); // 원 설정
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawBall(); // function drawBall();실행
+        x += dx;
+        y += dy;
+    }
+    
+    setInterval(draw, 10); //반복 - 효과과 반복 되는 것이 아니라 함수 값이 계속 추가되어 위치값이 추가되어서 마치 움직이는 것처럼 보이게 만든다. 
+</script>
+
+</body>
+</html>

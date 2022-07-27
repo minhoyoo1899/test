@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gamedev Canvas Workshop - lesson 3: bounce off the walls</title>
+    <style>* { padding: 0; margin: 0; } canvas { background: #eee; display: block; margin: 0 auto; }</style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="480" height="320"></canvas>
+
+<script>
+    // 전역변수 설정
+    var canvas = document.getElementById("myCanvas");     
+    console.dir(canvas);
+    var ctx = canvas.getContext("2d"); //캔버스의 드로잉 컨텍스트를 반환 but 컨텍스트 식별자가 지원되지 않을 경우 null을 반환 
+    //getContext의 사용범위 : 
+    var ballRadius = 10;
+    var x = canvas.width/2; //캔버스 태그에서 가져온 속성의 변수 var canvas의 내부요소중 width값의 1/2
+    var y = canvas.height-30;
+    var dx = 2;
+    var dy = -2;
+
+    function drawBall() {
+        ctx.beginPath(); 
+        ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();        
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawBall();
+
+        if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+            dx = -dx;
+        }
+        if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+            dy = -dy;
+        }
+
+        x += dx;
+        y += dy;
+    }
+
+    setInterval(draw, 10);
+</script>
+
+</body>
+</html>
