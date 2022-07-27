@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ps5</title>
+  <style>
+    body{
+      margin: 0;      
+    }
+
+    body section header {      
+      height: 3vw;
+      display: flex;    
+    }
+
+    section, footer{
+      width: 100%;
+    }
+    .sonybar{
+      width: 100%;
+      height: 3.6vh;
+      background-color: black;
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      align-content: space-around;
+      justify-content: flex-start;
+    }
+    .left_list{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: space-between;
+      justify-content: flex-start;
+      align-items: center;
+      color: #808080;
+      width: 133vh;
+    }
+    .right_list{
+      display: flex;
+      width: 30vh;
+      height: 2.5vw;
+
+    }
+    .right_list div:nth-of-type(1){
+      width: 49%;
+      height: 84%;
+      text-align: center;
+      font-size: 160%;
+      background-color: rgba(43, 43, 43, 1);
+      border-radius: 45px;
+      color: white;
+      margin: 2% 0% 0% 0%;
+    }
+    .right_list div:nth-of-type(1):hover {
+      background-color: rgba(96, 96, 96, 1);
+    }
+
+    .right_list div:nth-of-type(2) {
+      width: 13vh;
+      margin: 0% 0% 0% 3%;
+      font-size: 135%;
+      border: 1px solid;
+      box-shadow: 0.6px 1px 0px 2px;
+      text-align: center;
+    }
+
+    nav ul{
+      list-style: none;
+      padding-left: 0px;  
+      display: inline-flex;
+      margin: 0% 0% 0% 0%;
+      width: 50%;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: space-between;
+      justify-content: space-around;
+    }
+
+    nav ul li:nth-of-type(1) {
+      background-color: rgba(232, 232, 232, 1);
+      width: 17%;
+      text-align: center;
+      border-radius: 60px;
+    }
+    
+    .canvas{
+      height: 80vw;
+      text-align: center;
+    }
+    footer {
+      background-color: rgba(0, 67, 156, 1);
+      height: 40vw;     
+      display: flex; 
+    }
+    footer div:nth-of-type(1) div:nth-of-type(1){
+      width: 20%;
+      height: 38%;
+    }
+    footer div:nth-of-type(1) div:nth-of-type(2){
+      width: 100%;
+      height: 53%;
+      margin: 0% 0% 0% 4%;
+    }
+    footer div:nth-of-type(1) div:nth-of-type(2) div:nth-of-type(1), footer div:nth-of-type(2){
+      color: white;
+    }
+    .client_service_list {
+      display: flex;
+      width: 57%;
+      height: 50%;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-start;
+      align-content: center;
+      margin: 7% 0% 0% 0%;
+    }
+    footer div:nth-of-type(1) div:nth-of-type(2) img {
+      width: auto;
+    }
+    footer div:nth-of-type(1) div:nth-of-type(2) div:nth-of-type(1) {
+      width: auto;
+    }
+    footer div:nth-of-type(2) div ul{
+      list-style: none;
+      padding-left: 0px;
+    }
+    footer div:nth-of-type(2) div:nth-of-type(1) ul li:nth-of-type(2) {
+      color: rgba(237, 107, 10, 1);
+
+    }
+    footer div:nth-of-type(2) div{
+      width: 28%;
+    }
+    footer div:nth-of-type(2) div:nth-of-type(1){
+      width: 20%;
+    }
+  </style>
+</head>
+<body>
+  <div class="sonybar">
+    <img src="img/sony_bar.jpg" alt=""/> <!-- 상단로고 -->
+  </div>
+  <section>
+    <header>
+      <div class="left_list">
+        <div>
+          <img src="img/ps_blue_logo.jpg" alt=""> <!-- ps로고 -->
+        </div>
+        <div>
+          게임
+          <img src="img/gray_down_arrow.jpg" alt=""> <!-- 드롭다운화살표 -->
+        </div>
+        <div>
+          하드웨어
+          <img src="img/gray_down_arrow.jpg" alt=""> <!-- 드롭다운화살표 -->
+        </div>
+        <div>
+          서비스
+          <img src="img/gray_down_arrow.jpg" alt=""> <!-- 드롭다운화살표 --></div>
+        <div>
+          뉴스
+          <img src="img/gray_down_arrow.jpg" alt=""> <!-- 드롭다운화살표 --></div>
+        <div>
+          구입
+          <img src="img/gray_down_arrow.jpg" alt=""> <!-- 드롭다운화살표 --></div>
+        <div>
+          고객지원
+          <img src="img/gray_down_arrow.jpg" alt=""> <!-- 드롭다운화살표 --></div>
+      </div>
+      <div class="right_list">
+        <div>로그인</div>
+        <div>
+          검색          
+          <img src="img/search_icon.jpg" alt="">  
+        </div>
+      </div>
+    </header>
+    <nav>
+      <img src="img/ps5_logo.jpg" alt="">
+      <ul>
+        <li>PlayStation5</li>
+        <li>게임</li>
+        <li>액세서리</li>
+        <li>더 많은 기능</li>
+        <li>엔터테이먼트</li>
+      </ul>     
+    </nav>
+  </section>
+  <section></section>
+  <section class="canvas">캔버스 구간</section>
+  <footer>
+    <div>
+      <div>
+        <img src="img/pslogo_nation.jpg" alt="">
+      </div>
+      <div>
+        <img src="img/sony_interactive_enteratiment.jpg" alt="">
+        <div>
+          ©2022 Sony Interactive Entertainment Inc. All Rights Reserved. 
+          <br/><br/>
+          회사명 : Sony Interactive Entertainment Inc.<br/>
+          대표 : 타이노사토시, 이소정<br/>
+          고객센터 TEL: 02-6677-7771, sie-ko-personalinfo@sony.com<br/>
+          URL: https://www.playstation.com/ko-kr/support/<br/>
+          주소 : 1-7-1 Konan, Minato-ku, Tokyo, 108-0075 Japan<br/>
+          사업자등록번호 : 106-86-02673<br/>
+          통신판매업신고 : 2015-서울강남-02049<br/>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- 이부분 수정필요 -->
+    <!-- 오른쪽으로 보낼 방법을 몰라 absolute로 처리  단점: 비율 반응형이 많이 깨지게 됨 → flex-->
+    <!-- 세로로 가는 부분과 가로로 배치할 부분을 리스트로 나눈다음 각각 요소를 따로 정의하여 배치하는것으로 해결함 -->
+    <div class="client_service_list"> 
+      <div><ul>
+        <li>고객지원</li>
+        <li>개인정보처리방침</li>
+        <li>이용약관</li>
+        <li>PlayStation</li>
+        <li>Studios</li>
+        <li>법률</li>
+        <li>SIE 소개</li>
+        <li>PlayStation과 환경</li>
+      </ul></div>
+      <div>
+        <ul>
+        <li>PSN 이용약관</li>
+        <li>PlayStation™Store 환불 규정</li>
+        <li>PlayStation™Network: 건강상 유의사항</li>
+        <li>연령제한에 대하여</li>
+        <li>PlayStation 커리어</li>
+        <li>회사 소개</li>
+        <li>지적 재산권 표기</li>
+        <li>사이트 맵</li>
+      </ul></div>
+      <div><ul>
+        <li>페이스북</li>
+        <li>유튜브</li>
+        <li>인스타그램</li>
+        <li>네이버 포스트</li>
+        <li>카카오톡 플러스친구</li>
+      </ul></div>
+    </div>
+  </footer>
+</body>
+</html>
