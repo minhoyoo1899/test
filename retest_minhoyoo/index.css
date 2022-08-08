@@ -11,6 +11,11 @@
 
 body {
   background-color: rgba(25, 206, 96, 0.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: center;
 }
 body > aside {
   width: 5vw;
@@ -41,5 +46,74 @@ body > aside > div > div > div {
   width: 3.202vh;
   height: 3.202vh;
   background-color: rgb(255, 247, 225);
+  display: flex;
+}
+body > main {
+  width: 95vw;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+body > main > header {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+body > main > header > div:nth-of-type(1) {
+  width: 30%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body > main > header > div:nth-of-type(1) > div:nth-of-type(1) {
+  color: rgb(25, 206, 96);
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+body > main > header > div:nth-of-type(1) > div:nth-of-type(2) {
+  width: 30%;
+  height: 30%;
+  color: rgb(247, 249, 250);
+  background-color: rgb(25, 206, 96);
+  border-radius: 12px;
+  text-align: center;
+}
+body > main > header > div:nth-of-type(1) > div:nth-of-type(2):hover {
+  background-color: white;
+  color: black;
+}
+body > main > header > div:nth-of-type(2) {
+  width: 52%;
+  height: 8%;
+  display: flex;
+}
+body > main > header > div:nth-of-type(2) > div {
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+body > main > header > div:nth-of-type(2) > div:nth-of-type(1) {
+  background-color: rgb(25, 206, 96);
+  border-radius: 12px 0px 0px 0px;
+  color: white;
+}
+body > main > header > div:nth-of-type(2) > div:nth-of-type(2) {
+  background-color: rgb(218, 225, 230);
+  border-radius: 0px 12px 0px 0px;
+}
+body > main > section {
+  width: 50%;
+  height: 100%;
   display: flex;
 }/*# sourceMappingURL=index.css.map */
